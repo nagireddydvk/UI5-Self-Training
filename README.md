@@ -1,4 +1,5 @@
 # ui5-training
 
-### Form control is introduced
-### Two-way binding
+### Introduce Select button
+### Introduce aggregation (for Select)
+### Introduce aggregation binding
