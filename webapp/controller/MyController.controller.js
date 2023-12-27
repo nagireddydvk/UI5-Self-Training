@@ -6,15 +6,8 @@ sap.ui.define([
     return Controller.extend("MyController", {
         onInit: function () {
             var oData = {
-                field1: 2,
-                field2: 6,
-                operator: null,
-                output: null,
-                possibleOperations: [
-                    {"id": " ", "value": "Choose one"},
-                    {"id": "+", "value": "plus"},
-                    {"id": "*", "value": "multiply"}
-                ]
+                field1: "Buhler",
+                field2: ""
             };
             var oModel = new JSONModel(oData);
             this.getView().setModel(oModel);
