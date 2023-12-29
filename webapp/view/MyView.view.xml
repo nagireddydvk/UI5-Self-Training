@@ -12,8 +12,8 @@
 				<Input value="{/operator}"/>
 				<Label text="Output" />
 				<Text text="{/output}"/>
-                <Button text="Calculate" press=".calculate"/>
 			</f:content>
 		</f:SimpleForm>
+        <Button text="Calculate" press=".calculate"/>		
     </VBox>
 </mvc:View>
