@@ -1,4 +1,4 @@
-<mvc:View controllerName="MyApp.controller.MyController" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form">
+<mvc:View controllerName="MyApp.controller.MyController" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form">
     <VBox>
 		<f:SimpleForm
 			layout="ResponsiveGridLayout"
@@ -9,7 +9,12 @@
 				<Label text="Value 2" />
 				<Input id="value2" value="{/field2}" />
 				<Label text="Operator" />
-				<Input value="{/operator}"/>
+				<Select selectedKey="{/operator}" items="{/parent/operations}">
+				   <items>
+				      <core:Item key ="{id}" text="{text}"/>
+				     
+					</items>
+				</Select>
 				<Label text="Output" />
 				<Text text="{/output}"/>
 			</f:content>

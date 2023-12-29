@@ -7,7 +7,14 @@ sap.ui.define([
         onInit: function () {
             var oData = {
                 field1: 2,
-                field2: 5
+                field2: 5,
+                operator: null,
+                parent: {
+                operations: [
+                    {id: "", text:""},
+                    {id: "+", text:"Plus"},
+                    {id: "*", text:"Multiply"}]
+                }
             };
             var oModel = new JSONModel(oData);
             this.getView().setModel(oModel);
