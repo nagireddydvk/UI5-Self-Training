@@ -1,13 +1,12 @@
 sap.ui.define([
-    "sap/ui/core/UIComponent"
-], function (UIComponent) {
+    "sap/ui/core/UIComponent",
+    "sap/ui/model/resource/ResourceModel"
+], function (UIComponent, ResourceModel) {
     "use strict";
     return UIComponent.extend("MyApp.Component", {
         metadata : {
-            rootView: {
-                viewName: "MyApp.view.MyView",
-                type: "XML"
-            }
-        }
+           manifest: "json"
+        },
+        
     });
 });

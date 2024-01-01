@@ -4,11 +4,11 @@
 			layout="ResponsiveGridLayout"
 			title="Demo" >
 			<f:content>
-				<Label text="Value 1" />
-				<Input id="value1" value="{/field1}" />
-				<Label text="Value 2" />
-				<Input id="value2" value="{/field2}" />
-				<Label text="Operator" />
+				<Label text="{i18n>firstValue}"/>
+				<Input id="value1" value="{/field1}"/>
+				<Label text="{i18n>secondValue}"/>
+				<Input id="value2" value="{/field2}"/>
+				<Label text="{i18n>output}"/>
 				<Select selectedKey="{/operator}" items="{/parent/operations}">
 				   <items>
 				      <core:Item key ="{id}" text="{text}"/>
