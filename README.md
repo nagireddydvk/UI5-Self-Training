@@ -5,4 +5,4 @@
 
 ### Setup Deployment
 #### npm run deploy-config
-#### Deploy fails currently
+#### Deploy success
