@@ -1,6 +1,6 @@
 specVersion: "3.1"
 metadata:
-  name: myapp
+  name: myappnagi
 type: application
 server:
   customMiddleware:
@@ -27,5 +27,5 @@ server:
     - name: fiori-tools-preview
       afterMiddleware: fiori-tools-appreload
       configuration:
-        component: MyApp
+        component: myappnagi
         ui5Theme: sap_fiori_3

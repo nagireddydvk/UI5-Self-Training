@@ -1,8 +1,6 @@
-# yaml-language-server: $schema=https://sap.github.io/ui5-tooling/schema/ui5.yaml.json
-
 specVersion: "3.1"
 metadata:
-  name: myapp
+  name: myappnagi
 type: application
 builder:
   resources:
@@ -14,12 +12,12 @@ builder:
       afterTask: generateCachebusterInfo
       configuration:
         target:
-          destination: SA4
-          url: http://wsea4.buhler-ltd.com:443
+          destination: SA4_CLONING
+          url: http://wssa4.buhler-ltd.com:443
         app:
-          name: ZCALC_NAGI
+          name: ZCALC_NAGI2
           description: My First App
           package: ZUI5_TRAINING
-          transport: SA4K902485
+          transport: SA4K902512
         exclude:
           - /test/

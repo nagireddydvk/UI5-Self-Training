@@ -3,7 +3,7 @@ sap.ui.define([
     "sap/ui/model/resource/ResourceModel"
 ], function (UIComponent, ResourceModel) {
     "use strict";
-    return UIComponent.extend("MyApp.Component", {
+    return UIComponent.extend("myappnagi.Component", {
         metadata : {
             manifest: "json"
         },
@@ -13,7 +13,7 @@ sap.ui.define([
 
         //     // create and set the i18n model
         //     var i18nModel = new ResourceModel({
-        //         bundleName: "MyApp.i18n.i18n"
+        //         bundleName: "myappnagi.i18n.i18n"
         //     });
         //     this.setModel(i18nModel, "i18n");
         // }        

@@ -1,4 +1,4 @@
-<mvc:View xmlns:core="sap.ui.core" controllerName="MyApp.controller.MyController" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form">
+<mvc:View xmlns:core="sap.ui.core" controllerName="myappnagi.controller.MyController" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form">
     <VBox>
 		<f:SimpleForm
 			layout="ResponsiveGridLayout"

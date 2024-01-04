@@ -1,7 +1,7 @@
 {
     "_version": "1.30.0",
     "sap.app": {
-        "id": "MyApp",
+        "id": "myappnagi_Nagi",
         "type": "application",
         "i18n": "i18n/i18n.properties",
         "applicationVersion": {
@@ -37,7 +37,7 @@
     },
     "sap.ui5": {
         "rootView": {
-            "viewName": "MyApp.view.MyView",
+            "viewName": "myappnagi.view.MyView",
             "type": "XML",
             "async": true
         },
@@ -56,7 +56,7 @@
             "i18n": {
                 "type": "sap.ui.model.resource.ResourceModel",
                 "settings": {
-                    "bundleName": "MyApp.i18n.i18n"
+                    "bundleName": "myappnagi.i18n.i18n"
                 }
             }
         }
