@@ -1,0 +1,3 @@
+<mvc:View controllerName="MyApp.controller.Root" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" >
+   <App id="root"/>
+</mvc:View>

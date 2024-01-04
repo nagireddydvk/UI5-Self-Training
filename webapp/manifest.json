@@ -37,10 +37,30 @@
     },
     "sap.ui5": {
         "rootView": {
-            "viewName": "MyApp.view.MyView",
-            "type": "XML",
-            "async": true
-        },
+            "viewName": "MyApp.view.Root",
+            "type": "XML"
+        } ,       
+        "routing": {
+            "config":{
+                "routerClass": "sap.m.routing.Router",
+                "controlId": "root",
+                "controlAggregation": "pages",
+                "viewType": "XML",
+                "viewPath": "MyApp.view"
+            },
+            "routes":[
+                {
+                    "pattern": "",
+                    "name": "HomeRoute",
+                   "target": "home"
+                }
+            ],
+            "targets": {
+                "home":{
+               "viewName": "MyView"
+                 }
+            }
+         },
         "dependencies": {
             "minUI5Version": "1.60.0",
             "libs": {
