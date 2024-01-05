@@ -4,7 +4,7 @@ sap.ui.define([
     "use strict";
     return UIComponent.extend("MyApp.Component", {
         metadata : {
-            manifest: "json"
+            manifest: "json"      //read manifest file
         },
          init: function () {
         //     // call the base component's init function. In ABAP we have this.super()

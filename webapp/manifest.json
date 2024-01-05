@@ -44,7 +44,7 @@
             "config":{
                 "routerClass": "sap.m.routing.Router",
                 "controlId": "root",
-                "controlAggregation": "pages",
+                "controlAggregation": "pages", 
                 "viewType": "XML",
                 "viewPath": "MyApp.view"
             },
@@ -57,7 +57,7 @@
             ],
             "targets": {
                 "home":{
-               "viewName": "MyView"
+               "viewName": "POList"
                  }
             }
          },
@@ -71,7 +71,8 @@
         "models": {
             "": {
                 "type": "sap.ui.model.json.JSONModel",
-                "uri": "model/data.json"
+                "uri": "model/sampleData.json"
+               
             },
             "i18n": {
                 "type": "sap.ui.model.resource.ResourceModel",

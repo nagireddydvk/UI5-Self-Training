@@ -1,0 +1,19 @@
+<mvc:View xmlns:table="sap.ui.table" xmlns:core="sap.ui.core" controllerName="MyApp.controller.POList" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form">
+   <Table id="poTable" items="{/POLIst}" columns="{/POLIst2}">
+   <columns>
+     <Column >
+	   <Text text="{name}"/>
+	 </Column>
+	 
+   </columns>
+   <items>
+      <ColumnListItem >
+         <cells>
+		   <Text text="{poNumber}"/>
+		   <Text text="{description}"/>
+		   <Text text="{totalAmount}"/>
+		 </cells>
+      </ColumnListItem>
+   </items>
+   </Table>
+</mvc:View>
