@@ -7,7 +7,7 @@
 	 
    </columns>
    <items>
-      <ColumnListItem >
+      <ColumnListItem type="Active" press="gotoDetail">
          <cells>
 		   <Text text="{poNumber}"/>
 		   <Text text="{description}"/>

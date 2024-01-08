@@ -53,12 +53,20 @@
                     "pattern": "",
                     "name": "HomeRoute",
                    "target": "home"
+                },
+                {
+                    "pattern": "PODetail",
+                    "name": "Detail",
+                   "target": "DetailTarget"
                 }
             ],
             "targets": {
                 "home":{
                "viewName": "POList"
-                 }
+                 },
+                 "DetailTarget":{
+                    "viewName": "PODetail"
+                      }
             }
          },
         "dependencies": {
