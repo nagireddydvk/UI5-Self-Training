@@ -1,9 +1,10 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
-    "sap/ui/model/json/JSONModel"
-], function (Controller, JSONModel) {
+    "MyApp/model/util"
+], function (Controller,util) {
     "use strict";
     return Controller.extend("MyApp.controller.POList", {
+        listOfFunctions: util,
         gotoDetail: function(oEvent){
             const oSource = oEvent.getSource();
             const sPath = oSource.getBindingContext().getPath();
