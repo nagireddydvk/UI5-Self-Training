@@ -4,10 +4,14 @@ sap.ui.define([
 ], function (Controller, JSONModel) {
     "use strict";
     return Controller.extend("MyApp.controller.POList", {
-        gotoDetail: function(){
-      
+        gotoDetail: function(oEvent){
+            const oSource = oEvent.getSource();
+            const sPath = oSource.getBindingContext().getPath();
+            const lineClicked = sPath.split("/")[2];
             const router = this.getOwnerComponent().getRouter();
-            router.navTo("Detail");
+            router.navTo("Detail",{
+                "line" : lineClicked,
+            });
 
         }
 

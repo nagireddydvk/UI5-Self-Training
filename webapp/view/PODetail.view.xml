@@ -4,18 +4,12 @@
 			layout="ResponsiveGridLayout"
 			title="Demo" >
 			<f:content>
-				<Label text="{i18n>firstValue}" />
-				<Input id="value1" value="{/field1}" />
-				<Label text="{i18n>secondValue}" />
-				<Input id="value2" value="{/field2}" />
-				<Label text="Operator" />
-				<Select selectedKey="{/operator}" items="{/possibleOperations}" >
-					<items>
-						<core:Item key="{id}" text="{value}"/>
-					</items>
-				</Select>				
-				<Label text="{i18n>answer}" />
-				<Text text="{/output}"/>
+				<Label text="{i18n>poNumber}" />
+				<Text id="value1" text="{poNumber}" />
+				<Label text="{i18n>description}" />
+				<Text id="value2" text="{description}" />
+				<Label text="{i18n>amount}" />
+				<Text text="{totalAmount}"/>
 			</f:content>
 		</f:SimpleForm>
         <Button text="{i18n>gotoPO}" press=".gotohome"/>		
