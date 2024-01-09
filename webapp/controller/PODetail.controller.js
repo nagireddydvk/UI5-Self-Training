@@ -13,7 +13,7 @@ sap.ui.define([
         _routeMatched: function(oEvent){
             const line = oEvent.getParameter("arguments").line;
             const bindingpath =  "/POLIst/" + line;
-            this.getview().bindElement(bindingpath);
+            this.getView().bindElement(bindingpath);
         },
         gotohome: function(){
       
