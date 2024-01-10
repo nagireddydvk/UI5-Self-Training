@@ -18,9 +18,9 @@ sap.ui.define([
 
         },
         showpopup: async function(oEvent){
-            const line = oEvent.getSource().getParent().getBindingContext().getPath().split("/")[2];
+            const line = oEvent.getSource().getParent().getBindingContext().getPath().split("/")[2];  // path to get the data
             if(! this.detailDialog ){
-                const oDialogContent = await Fragment.load({
+                const oDialogContent = await Fragment.load({ 
                     "name": "MyApp.view.fragments.POdetail",
                      "type" : "XML"
                 });
@@ -28,7 +28,7 @@ sap.ui.define([
                     title: "PO Details",
                     content: oDialogContent
                  });
-                 this.getView().addDependent(this.detailDialog);
+                 this.getView().addDependent(this.detailDialog); //link dialog with view
     
                 }
                 const bindingpath =  "/POLIst/" + line;
