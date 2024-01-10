@@ -17,7 +17,8 @@ sap.ui.define([
             });
 
         },
-        showpopup: async function(){
+        showpopup: async function(oEvent){
+            const line = oEvent.getSource().getParent().getBindingContext().getPath().split("/")[2];
             if(! this.detailDialog ){
                 const oDialogContent = await Fragment.load({
                     "name": "MyApp.view.fragments.POdetail",
@@ -30,6 +31,8 @@ sap.ui.define([
                  this.getView().addDependent(this.detailDialog);
     
                 }
+                const bindingpath =  "/POLIst/" + line;
+                this.detailDialog.bindElement(bindingpath);
                 this.detailDialog.open();
 
             }
