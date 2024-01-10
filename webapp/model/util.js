@@ -1,9 +1,9 @@
 sap.ui.define([], function() {
     'use strict';
     return {
-        toTwoDecimals: function(num){
+        toTwoDecimals: function(num,currency){
             const output = parseInt(num).toFixed(2);
-            return output;
+            return output + " " + currency;
         }
     }
 });

@@ -9,7 +9,7 @@
 				<Label text="{i18n>description}" />
 				<Text id="value2" text="{description}" />
 				<Label text="{i18n>amount}" />
-				<Text text="{totalAmount}"/>
+				<Text text="{totalAmount} {currency}"/>
 			</f:content>
 		</f:SimpleForm>
         <Button text="{i18n>gotoPO}" press=".gotohome"/>		

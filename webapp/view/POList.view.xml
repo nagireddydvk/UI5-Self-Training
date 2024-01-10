@@ -18,7 +18,9 @@
          <cells>
 		   <Text text="{poNumber}"/>
 		   <Text text="{description}"/>
-		   <Text text="{path: 'totalAmount', formatter: '.listOfFunctions.toTwoDecimals'}"/>
+		   <Text text="{parts: ['totalAmount','currency'], formatter: '.listOfFunctions.toTwoDecimals'}"/>
+       <Input value="{parts: ['totalAmount','currency'], formatter: '.listOfFunctions.toTwoDecimals'}"/>
+       <Input value="{totalAmount}"/>
 		 </cells>
       </ColumnListItem>
    </items>
