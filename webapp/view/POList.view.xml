@@ -21,6 +21,7 @@
 		   <Text text="{parts: ['totalAmount','currency'], formatter: '.listOfFunctions.toTwoDecimals'}"/>
        <Input value="{parts: ['totalAmount','currency'], formatter: '.listOfFunctions.toTwoDecimals'}"/>
        <Input value="{totalAmount}"/>
+       <Button text="{i18n>details}" press="showpopup"></Button>
 		 </cells>
       </ColumnListItem>
    </items>

@@ -1,7 +1,9 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
-    "MyApp/model/util"
-], function (Controller,util) {
+    "MyApp/model/util",
+    "sap/m/Dialog",
+    "sap/ui/core/Fragment"
+], function (Controller, util, Dialog, Fragment) {
     "use strict";
     return Controller.extend("MyApp.controller.POList", {
         listOfFunctions: util,
@@ -14,8 +16,24 @@ sap.ui.define([
                 "line" : lineClicked,
             });
 
-        }
+        },
+        showpopup: async function(){
+            if(! this.detailDialog ){
+                const oDialogContent = await Fragment.load({
+                    "name": "MyApp.view.fragments.POdetail",
+                     "type" : "XML"
+                });
+                  this.detailDialog = new Dialog({
+                    title: "PO Details",
+                    content: oDialogContent
+                 });
+                 this.getView().addDependent(this.detailDialog);
+    
+                }
+                this.detailDialog.open();
 
+            }
+        
         
     });
 });
