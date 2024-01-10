@@ -7,9 +7,13 @@
 				<Label text="{i18n>poNumber}" />
 				<Text id="value1" text="{poNumber}" />
 				<Label text="{i18n>description}" />
-				<Text id="value2" text="{description}" />
+				<Text id="value2" text="{description}" ></Text>
+				<Text id="value3" text="{totalAmount} {currency}" ></Text>
+				<Text text="{parts: ['totalAmount' , 'currency'], formatter: '.listOfFunctions.toTwoDecimals'}" ></Text>
 				<Label text="{i18n>amount}" />
-				<Text text="{totalAmount} {currency}"/>
+				<Text text="{= ${totalAmount}  + 100 }"></Text>
+					<Label text="{i18n>amount}" />
+				<Text text="{= ${totalAmount}  !== 2000 ? 'High' : 'Low' }"></Text>
 			</f:content>
 		</f:SimpleForm>
         <Button text="{i18n>gotoPO}" press=".gotohome"/>		
