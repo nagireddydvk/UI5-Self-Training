@@ -8,6 +8,9 @@ server:
       afterMiddleware: compression
       configuration:
         ignoreCertError: false
+        backend:
+        - path: /sap/opu/odata
+          destination: SA4
         ui5:
           path:
             - /resources

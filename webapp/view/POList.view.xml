@@ -6,21 +6,26 @@
                     <ObjectAttribute text="Total POs: {/POLIst/length}" />
                 </attributes>
             </ObjectHeader>
-   <Table id="poTable" items="{/POLIst}" columns="{/POLIst2}">
+   <Table id="poTable" items="{/C_MM_MaterialGroupValueHelp}" growing="true" growingThreshold="50" growingScrollToLoad="true">
    <columns>
      <Column >
-	   <Text text="{name}"/>
+	   <Text text="Material Group"/>
+	 </Column>
+     <Column >
+	   <Text text="Material Group Text"/>
+	 </Column>
+     <Column >
+	   <Text text="Material Group Name"/>
 	 </Column>
 	 
    </columns>
    <items>
       <ColumnListItem type="Active" press="gotoDetail">
          <cells>
-		   <Text text="{poNumber}"/>
-		   <Text text="{description}"/>
-		   <Text text="{parts: ['totalAmount','currency'], formatter: '.listOfFunctions.toTwoDecimals'}"/>
-       <Input value="{parts: ['totalAmount','currency'], formatter: '.listOfFunctions.toTwoDecimals'}"/>
-       <Input value="{totalAmount}"/>
+		   <Text text="{MaterialGroup}"/>
+		   <Text text="{MaterialGroupText}"/>
+           <Text text="{MaterialGroupName}"/>
+		  
        <Button text="{i18n>details}" press="showpopup"></Button>
 		 </cells>
       </ColumnListItem>
