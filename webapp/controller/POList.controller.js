@@ -9,11 +9,10 @@ sap.ui.define([
         listOfFunctions: util,
         gotoDetail: function(oEvent){
             const oSource = oEvent.getSource();
-            const sPath = oSource.getBindingContext().getPath();
-            const lineClicked = sPath.split("/")[2];
+            const sMaterialGroup = oSource.getBindingContext().getObject().MaterialGroup;
             const router = this.getOwnerComponent().getRouter();
             router.navTo("Detail",{
-                "line" : lineClicked,
+                "id" : sMaterialGroup,
             });
 
         },

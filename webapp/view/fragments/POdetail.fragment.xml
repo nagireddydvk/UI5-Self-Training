@@ -4,9 +4,9 @@
 			title="Demo" >
 			<f:content>
 				<Label text="{i18n>poNumber}" />
-				<Text id="value1" text="{poNumber}" />
+				<Text id="value1" text="{MaterialGroup}" />
 				<Label text="{i18n>description}" />
-				<Text id="value2" text="{description}" ></Text>
+				<Text id="value2" text="{MaterialGroupText}" ></Text>
 				<Text id="value3" text="{totalAmount} {currency}" ></Text>
 				<Text text="{parts: ['totalAmount' , 'currency'], formatter: '.listOfFunctions.toTwoDecimals'}" ></Text>
 				<Label text="{i18n>amount}" />

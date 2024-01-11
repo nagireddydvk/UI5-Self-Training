@@ -11,9 +11,12 @@ sap.ui.define([
         },
 
         _routeMatched: function(oEvent){
-            const line = oEvent.getParameter("arguments").line;
-            const bindingpath =  "/POLIst/" + line;
-            this.getView().bindElement(bindingpath);
+            const sMaterialGroupId = oEvent.getParameter("arguments").id;
+            const oModel = this.getView().getModel();
+            const sPath = oModel.createKey("/C_MM_MaterialGroupValueHelp", {
+                "MaterialGroup": sMaterialGroupId
+            });
+            this.getView().bindElement(sPath);
         },
         gotohome: function(){
       

@@ -64,7 +64,7 @@
                    "target": "home"
                 },
                 {
-                    "pattern": "PODetail/{line}",
+                    "pattern": "MaterialGroup/{id}",
                     "name": "Detail",
                    "target": "DetailTarget"
                 }
