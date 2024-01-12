@@ -6,25 +6,29 @@
                     <ObjectAttribute text="Total POs: {/POLIst/length}" />
                 </attributes>
             </ObjectHeader>
-   <Table id="poTable" items="{/C_MM_MaterialGroupValueHelp}" growing="true" growingThreshold="50" growingScrollToLoad="true">
+   <Table id="poTable" items="{/ORDERHEADERSet}" growing="true" growingThreshold="50" growingScrollToLoad="true">
    <columns>
      <Column >
-	   <Text text="Material Group"/>
+	   <Text text="PO Numner"/>
 	 </Column>
      <Column >
-	   <Text text="Material Group Text"/>
+	   <Text text="Date"/>
 	 </Column>
      <Column >
-	   <Text text="Material Group Name"/>
+	   <Text text="Created By"/>
+	 </Column>
+   <Column >
+	   <Text text="Amount"/>
 	 </Column>
 	 
    </columns>
    <items>
       <ColumnListItem type="Active" press="gotoDetail">
          <cells>
-		   <Text text="{MaterialGroup}"/>
-		   <Text text="{MaterialGroupText}"/>
-           <Text text="{MaterialGroupName}"/>
+		                <Text text="{Vbeln}" />
+                    <Text text="{Erdat}"/>
+                    <Text text="{Ernam}"/>
+                    <Text text="{Netwr}"/>
 		  
        <Button text="{i18n>details}" press="showpopup"></Button>
 		 </cells>

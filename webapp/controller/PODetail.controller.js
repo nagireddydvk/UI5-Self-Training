@@ -13,8 +13,8 @@ sap.ui.define([
         _routeMatched: function(oEvent){
             const sMaterialGroupId = oEvent.getParameter("arguments").id;
             const oModel = this.getView().getModel();
-            const sPath = oModel.createKey("/C_MM_MaterialGroupValueHelp", {
-                "MaterialGroup": sMaterialGroupId
+            const sPath = oModel.createKey("/ORDERHEADERSet", {
+                "Vbeln": sMaterialGroupId
             });
             this.getView().bindElement(sPath);
         },

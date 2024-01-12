@@ -3,11 +3,21 @@
 			layout="ResponsiveGridLayout"
 			title="Demo" >
 			<f:content>
-				<Label text="{i18n>poNumber}" />
-				<Text id="value1" text="{MaterialGroup}" />
-				<Label text="{i18n>description}" />
-				<Text id="value2" text="{MaterialGroupText}" ></Text>
-				<Text id="value3" text="{totalAmount} {currency}" ></Text>
+				      <Label text="{i18n>Order Number}" />
+                <Input id="value1" value="{Vbeln}" />
+                <Label text="{i18n>Created Date}" />
+                <Input id="value2" value="{Erdat}" />
+                <Label text="{i18n>Created By}" />
+                <Input id="value3" value="{Ernam}" />
+                <Label text="{i18n>Net Value}" />
+                <Input id="value4" value="{Netwr}" />
+                <Label text="{i18n>Currency}" />
+                <Input id="value5" value="{Waerk}" />
+                <Label text="{i18n>Quantity}" />
+                <Input id="value6" value="{Zmeng}" />
+                <Label text="{i18n>UOM}" />
+                <Input id="value7" value="{Zieme}" />
+				<Text id="value8" text="{totalAmount} {currency}" ></Text>
 				<Text text="{parts: ['totalAmount' , 'currency'], formatter: '.listOfFunctions.toTwoDecimals'}" ></Text>
 				<Label text="{i18n>amount}" />
 				<Text text="{= ${totalAmount}  + 100 }"></Text>

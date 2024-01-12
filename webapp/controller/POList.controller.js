@@ -9,10 +9,11 @@ sap.ui.define([
         listOfFunctions: util,
         gotoDetail: function(oEvent){
             const oSource = oEvent.getSource();
-            const sMaterialGroup = oSource.getBindingContext().getObject().MaterialGroup;
             const router = this.getOwnerComponent().getRouter();
+            const sPONumber = oSource.getBindingContext().getProperty("Vbeln");
+            
             router.navTo("Detail",{
-                "id" : sMaterialGroup,
+                "id" : sPONumber,
             });
 
         },

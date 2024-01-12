@@ -16,7 +16,7 @@
         },
         "dataSources": {
             "POService": {
-                "uri": "/sap/opu/odata/sap/C_PURCHASEORDER_FS_SRV",
+                "uri": "/sap/opu/odata/sap/ZTEST_UI5_TRAINING_SRV",
                 "type": "OData",
                 "settings": {
                     "odataVersion": "2.0"
@@ -64,7 +64,7 @@
                    "target": "home"
                 },
                 {
-                    "pattern": "MaterialGroup/{id}",
+                    "pattern": "PONumber/{id}",
                     "name": "Detail",
                    "target": "DetailTarget"
                 }

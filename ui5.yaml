@@ -10,7 +10,7 @@ server:
         ignoreCertError: false
         backend:
         - path: /sap/opu/odata
-          destination: SA4
+          destination: SA4_CLONING
         ui5:
           path:
             - /resources
