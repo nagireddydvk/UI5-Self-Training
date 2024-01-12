@@ -4,7 +4,7 @@
 			title="Demo" >
 			<f:content>
 				      <Label text="{i18n>Order Number}" />
-                <Input id="value1" value="{Vbeln}" />
+                <Input id="value1" value="{Vbeln}" editable="false"/>
                 <Label text="{i18n>Created Date}" />
                 <Input id="value2" value="{Erdat}" />
                 <Label text="{i18n>Created By}" />

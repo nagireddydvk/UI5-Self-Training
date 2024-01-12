@@ -23,6 +23,18 @@ sap.ui.define([
             const router = this.getOwnerComponent().getRouter();
             router.navTo("HomeRoute");
 
+        },
+        goSave: function(){
+           const oModel = this.getView().getModel();
+           oModel.submitChanges({     success: function(oData) {   
+                  // Success callback - handle successful submission        
+                  sap.m.MessageToast.show("Changes submitted successfully!");     
+                },     error: function(oError) {         
+                    // Error callback - handle errors        
+                    sap.m.MessageToast.show("Error while submitting changes");    
+                 } 
+                
+        });
         }
 
         

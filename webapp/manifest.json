@@ -72,9 +72,11 @@
             "targets": {
                 "home":{
                "viewName": "POList"
+               
                  },
                  "DetailTarget":{
-                    "viewName": "PODetail"
+                    "viewName": "PODetail",
+                    "transition":"flip"
                       }
             }
          },
@@ -87,7 +89,10 @@
         },
         "models": {
             "": {
-               "dataSource": "POService"
+               "dataSource": "POService",
+               "settings": {
+                "defaultBindingMode": "TwoWay"
+               }
                
             },
             "i18n": {
