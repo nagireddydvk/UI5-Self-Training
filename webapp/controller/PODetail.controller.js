@@ -28,8 +28,10 @@ sap.ui.define([
            const oModel = this.getView().getModel();
            oModel.submitChanges({     success: function(oData) {   
                   // Success callback - handle successful submission        
-                  sap.m.MessageToast.show("Changes submitted successfully!");     
-                },     error: function(oError) {         
+                  sap.m.MessageToast.show("Changes submitted successfully!");    
+                  this.getOwnerComponent().getRouter().navTo("Home");
+                }.bind(this) ,    
+                error: function(oError) {         
                     // Error callback - handle errors        
                     sap.m.MessageToast.show("Error while submitting changes");    
                  } 
