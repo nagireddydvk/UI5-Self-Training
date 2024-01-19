@@ -1,0 +1,22 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m" xmlns:f="sap.ui.layout.form" >
+  <f:SimpleForm
+			layout="ResponsiveGridLayout"
+			title="Demo" >
+			<f:content>
+				      <Label text="{i18n>Order Number}" />
+                <Input id="value1" value="{Vbeln}" editable="true"/>
+                <Label text="{i18n>Created Date}" />
+                <DatePicker id="value2" value="{Erdat}" />
+                <Label text="{i18n>Created By}" />
+                <Input id="value3" value="{Ernam}" />
+                <Label text="{i18n>Net Value}" />
+                <Input id="value4" value="{Netwr}" />
+                <Label text="{i18n>Currency}" />
+                <Input id="value5" value="{Waerk}" />
+                <Label text="{i18n>Quantity}" />
+                <Input id="value6" value="{Zmeng}" />
+                <Label text="{i18n>UOM}" />
+                <Input id="value7" value="{Zieme}" />				
+			</f:content>
+		</f:SimpleForm>
+</core:FragmentDefinition>

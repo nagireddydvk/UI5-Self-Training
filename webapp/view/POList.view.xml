@@ -1,40 +1,74 @@
-<mvc:View xmlns:table="sap.ui.table" xmlns:core="sap.ui.core" controllerName="MyApp.controller.POList" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" >
-   <Page showHeader="false">
-        <l:VerticalLayout >
-            <ObjectHeader title="Purchase Orders" >
+<mvc:View
+    xmlns:table="sap.ui.table"
+    xmlns:core="sap.ui.core"
+    controllerName="MyApp.controller.POList"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:l="sap.ui.layout"
+>
+    <Page showHeader="false">
+        <l:VerticalLayout>
+            <ObjectHeader title="Purchase Orders">
                 <attributes>
                     <ObjectAttribute text="Total POs: {/POLIst/length}" />
                 </attributes>
             </ObjectHeader>
-   <Table id="poTable" items="{/ORDERHEADERSet}" growing="true" growingThreshold="50" growingScrollToLoad="true">
-   <columns>
-     <Column >
-	   <Text text="PO Numner"/>
-	 </Column>
-     <Column >
-	   <Text text="Date"/>
-	 </Column>
-     <Column >
-	   <Text text="Created By"/>
-	 </Column>
-   <Column >
-	   <Text text="Amount"/>
-	 </Column>
-	 
-   </columns>
-   <items>
-      <ColumnListItem type="Active" press="gotoDetail">
-         <cells>
-		                <Text text="{Vbeln}" />
-                    <Text text="{Erdat}"/>
-                    <Text text="{Ernam}"/>
-                    <Text text="{Netwr}"/>
-		  
-       <Button text="{i18n>details}" press="showpopup"></Button>
-		 </cells>
-      </ColumnListItem>
-   </items>
-   </Table>
-       </l:VerticalLayout>
-</Page>
+            <Table
+                id="poTable"
+                items="{/ORDERHEADERSet}"
+                growing="true"
+                growingThreshold="50"
+                growingScrollToLoad="true"
+            >
+                <headerToolbar>
+                    <OverflowToolbar id="_IDGenOverflowToolbar1">
+                        <Title
+                            text="Purchase Orders"
+                            level="H2"
+                        />
+                        <ToolbarSpacer />
+                        <Button
+                            id="_IDGenButton1"
+                            text="New"
+                            press="onCreate"
+                        />
+                    </OverflowToolbar>
+                </headerToolbar>
+                <columns>
+                    <Column>
+                        <Text text="PO Numner" />
+                    </Column>
+                    <Column>
+                        <Text text="Date" />
+                    </Column>
+                    <Column>
+                        <Text text="Created By" />
+                    </Column>
+                    <Column>
+                        <Text text="Amount" />
+                    </Column>
+                    
+                </columns>
+                <items>
+                    <ColumnListItem
+                        type="Active"
+                        press="gotoDetail"
+                    >
+                        <cells>
+                            <Text text="{Vbeln}" />
+                            <Text text="{Erdat}" />
+                            <Text text="{Ernam}" />
+                            <Text text="{Netwr}" />
+
+                            <Button
+                                text="{i18n>details}"
+                                press="showpopup"
+                            />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </l:VerticalLayout>
+    </Page>
 </mvc:View>

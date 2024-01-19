@@ -2,11 +2,16 @@ sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "MyApp/model/util",
     "sap/m/Dialog",
-    "sap/ui/core/Fragment"
-], function (Controller, util, Dialog, Fragment) {
+    "sap/ui/core/Fragment",
+    "sap/m/Button",
+    "sap/m/MessageBox"
+], function (Controller, util, Dialog, Fragment, Button, MessageBox) {
     "use strict";
     return Controller.extend("MyApp.controller.POList", {
         listOfFunctions: util,
+        onInit: function(){
+            this.oModel = this.getOwnerComponent().getModel();
+        },
         gotoDetail: function(oEvent){
             const oSource = oEvent.getSource();
             const router = this.getOwnerComponent().getRouter();
@@ -15,6 +20,43 @@ sap.ui.define([
             router.navTo("Detail",{
                 "id" : sPONumber,
             });
+
+        },
+        onCreate: async function(){
+            if(! this.createDialog ){
+                const oDialogContent = await Fragment.load({ 
+                    "name": "MyApp.view.fragments.POcreate",
+                     "type" : "XML"
+                });
+                  this.createDialog = new Dialog({
+                    title: "PO Create",
+                    content: oDialogContent,
+                    endButton: new Button({
+                          text: "Save",
+                          press: this.createPO.bind(this)
+
+                    })
+                 });
+
+                 this.getView().addDependent(this.createDialog); //link dialog with view
+    
+                }  
+
+                const oContext = this.oModel.createEntry("/ORDERHEADERSet");
+                this.createDialog.setBindingContext(oContext);
+                this.createDialog.open();
+
+
+        },
+        createPO: async function(abc){
+              try {
+                const oData = this.createDialog.getBindingContext().getObject();
+                const oResponse = await this.oModel.create("/ORDERHEADERSet", oData);
+              } catch (error) {
+                MessageBox.error("Error :" + error.message);
+              }finally {
+                this.createDialog.close();
+              }
 
         },
         showpopup: async function(oEvent){
