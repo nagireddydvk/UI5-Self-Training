@@ -48,6 +48,11 @@ sap.ui.define([
 
 
         },
+        onDelete: async function(oEvent){
+                  const oContext = oEvent.getSource().getParent().getBindingContext();
+                  const oResponse = await this.oModel.remove(oContext.getPath);
+
+        },
         createPO: async function(abc){
               try {
                 const oData = this.createDialog.getBindingContext().getObject();

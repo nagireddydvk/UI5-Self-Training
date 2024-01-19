@@ -48,6 +48,10 @@
                     <Column>
                         <Text text="Amount" />
                     </Column>
+                    <Column>
+                        
+                    </Column>
+                    
                     
                 </columns>
                 <items>
@@ -60,12 +64,15 @@
                             <Text text="{Erdat}" />
                             <Text text="{Ernam}" />
                             <Text text="{Netwr}" />
-
+                             <Button text = "Delete" press="onDelete"/>
                             <Button
                                 text="{i18n>details}"
                                 press="showpopup"
                             />
                         </cells>
+                        
+                   
+                    
                     </ColumnListItem>
                 </items>
             </Table>
