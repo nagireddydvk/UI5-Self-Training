@@ -1,6 +1,6 @@
-<mvc:View xmlns:core="sap.ui.core" controllerName="MyApp.controller.PODetail" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form">
+<mvc:View xmlns:core="sap.ui.core" controllerName="VNRDEMNAGI.controller.PODetail" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form">
     <VBox>
-		<core:Fragment fragmentName = "MyApp.view.fragments.POdetail" type = "XML" />
+		<core:Fragment fragmentName = "VNRDEMNAGI.view.fragments.POdetail" type = "XML" />
         <Button text="{i18n>gotoPO}" press=".gotohome"/>	
         <Button text="{i18n>save}" press=".goSave"/>	
     </VBox>

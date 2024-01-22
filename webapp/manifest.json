@@ -1,7 +1,7 @@
 {
     "_version": "1.30.0",
     "sap.app": {
-        "id": "MyApp",
+        "id": "VNRDEMNAGI",
         "type": "application",
         "i18n": "i18n/i18n.properties",
         "applicationVersion": {
@@ -46,7 +46,7 @@
     },
     "sap.ui5": {
         "rootView": {
-            "viewName": "MyApp.view.Root",
+            "viewName": "VNRDEMNAGI.view.Root",
             "type": "XML"
         } ,       
         "routing": {
@@ -55,7 +55,7 @@
                 "controlId": "root",
                 "controlAggregation": "pages", 
                 "viewType": "XML",
-                "viewPath": "MyApp.view"
+                "viewPath": "VNRDEMNAGI.view"
             },
             "routes":[
                 {
@@ -98,7 +98,7 @@
             "i18n": {
                 "type": "sap.ui.model.resource.ResourceModel",
                 "settings": {
-                    "bundleName": "MyApp.i18n.i18n"
+                    "bundleName": "VNRDEMNAGI.i18n.i18n"
                 }
             }
         }

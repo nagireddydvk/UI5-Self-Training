@@ -1,13 +1,13 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
-    "MyApp/model/util",
+    "VNRDEMNAGI/model/util",
     "sap/m/Dialog",
     "sap/ui/core/Fragment",
     "sap/m/Button",
     "sap/m/MessageBox"
 ], function (Controller, util, Dialog, Fragment, Button, MessageBox) {
     "use strict";
-    return Controller.extend("MyApp.controller.POList", {
+    return Controller.extend("VNRDEMNAGI.controller.POList", {
         listOfFunctions: util,
         onInit: function(){
             this.oModel = this.getOwnerComponent().getModel();
@@ -25,7 +25,7 @@ sap.ui.define([
         onCreate: async function(){
             if(! this.createDialog ){
                 const oDialogContent = await Fragment.load({ 
-                    "name": "MyApp.view.fragments.POcreate",
+                    "name": "VNRDEMNAGI.view.fragments.POcreate",
                      "type" : "XML"
                 });
                   this.createDialog = new Dialog({
@@ -68,7 +68,7 @@ sap.ui.define([
             const line = oEvent.getSource().getParent().getBindingContext().getPath().split("/")[2];  // path to get the data
             if(! this.detailDialog ){
                 const oDialogContent = await Fragment.load({ 
-                    "name": "MyApp.view.fragments.POdetail",
+                    "name": "VNRDEMNAGI.view.fragments.POdetail",
                      "type" : "XML"
                 });
                   this.detailDialog = new Dialog({

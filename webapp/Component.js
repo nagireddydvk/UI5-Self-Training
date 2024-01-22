@@ -2,7 +2,7 @@ sap.ui.define([
     "sap/ui/core/UIComponent"
 ], function (UIComponent) {
     "use strict";
-    return UIComponent.extend("MyApp.Component", {
+    return UIComponent.extend("VNRDEMNAGI.Component", {
         metadata : {
             manifest: "json"      //read manifest file
         },

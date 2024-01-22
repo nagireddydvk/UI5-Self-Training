@@ -3,7 +3,7 @@ sap.ui.define([
     "sap/ui/model/json/JSONModel"
 ], function (Controller, JSONModel) {
     "use strict";
-    return Controller.extend("MyApp.controller.POList", {
+    return Controller.extend("VNRDEMNAGI.controller.POList", {
         onInit: function(){
              const router =this.getOwnerComponent().getRouter();
              router.getRoute("Detail").attachPatternMatched(this._routeMatched,this);
