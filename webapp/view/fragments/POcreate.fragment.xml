@@ -7,14 +7,19 @@
                 <Input id="value1" value="{Vbeln}" editable="true"/>
                 <Label text="{i18n>Created Date}" />
                 <DatePicker id="value2" value="{Erdat}" />
-                <Label text="{i18n>Created By}" />
+                <Label text="{i18n>Created By}" required="true" />
                 <Input id="value3" value="{Ernam}" />
                 <Label text="{i18n>Net Value}" />
                 <Input id="value4" value="{Netwr}" />
                 <Label text="{i18n>Currency}" />
                 <Input id="value5" value="{Waerk}" />
                 <Label text="{i18n>Quantity}" />
-                <Input id="value6" value="{Zmeng}" />
+                <Input id="value6" value="{path : 'Zmeng',
+                type: 'sap.ui.model.type.Float',
+                constraints: {
+															maximum: 123.99
+														}
+                }" />
                 <Label text="{i18n>UOM}" />
                 <Input id="value7" value="{Zieme}" />				
 			</f:content>

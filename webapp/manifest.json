@@ -45,9 +45,11 @@
         ]
     },
     "sap.ui5": {
+        "handleValidation": true,
         "rootView": {
             "viewName": "VNRDEMNAGI.view.Root",
             "type": "XML"
+
         } ,       
         "routing": {
             "config":{

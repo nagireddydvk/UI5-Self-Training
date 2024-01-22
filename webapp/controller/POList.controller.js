@@ -35,7 +35,14 @@ sap.ui.define([
                           text: "Save",
                           press: this.createPO.bind(this)
 
-                    })
+                    }),
+                    beginButton: new Button({
+                      text: "Close",
+                      press: function(){
+                        this.getParent().close();
+                      }
+
+                   }),                    
                  });
 
                  this.getView().addDependent(this.createDialog); //link dialog with view
@@ -50,11 +57,42 @@ sap.ui.define([
         },
         onDelete: async function(oEvent){
                   const oContext = oEvent.getSource().getParent().getBindingContext();
-                  const oResponse = await this.oModel.remove(oContext.getPath);
+                  this.getView().setBusy(true);
+                  const oResponse = await this.oModel.remove(oContext.getPath(), {
+                    success: function(){
+                      this.getView().setBusy(false);
+                      MessageBox.success("Success");
+                    }.bind(this),
+                    error: function(oError){
+                      this.getView().setBusy(false);
+                      const sError = JSON.parse(oError.responseText).error.message.value;
+                      MessageBox.error("Error occurred " + sError) ;
+                    }.bind(this)
+                  });
 
         },
         createPO: async function(abc){
-              try {
+            const oMessageManager = sap.ui.getCore().getMessageManager();
+            const oMessageModel = oMessageManager.getMessageModel();
+            
+            const aMessages = oMessageModel.getData();
+            if (aMessages.length > 0){
+              MessageBox.error("Please fix errors in the dialog");
+              return;
+            }
+
+            const mandatoryControl = sap.ui.getCore().byId("value3");
+            const value = mandatoryControl.getValue();
+            if (value == ""){
+              mandatoryControl.setValueState("Error");
+              mandatoryControl.setValueStateText("required field");
+              return;
+            }else {
+              mandatoryControl.setValueState();
+              mandatoryControl.setValueText();              
+            }
+            
+            try {
                 const oData = this.createDialog.getBindingContext().getObject();
                 const oResponse = await this.oModel.create("/ORDERHEADERSet", oData);
               } catch (error) {
@@ -67,10 +105,14 @@ sap.ui.define([
         showpopup: async function(oEvent){
             const line = oEvent.getSource().getParent().getBindingContext().getPath().split("/")[2];  // path to get the data
             if(! this.detailDialog ){
-                const oDialogContent = await Fragment.load({ 
-                    "name": "VNRDEMNAGI.view.fragments.POdetail",
-                     "type" : "XML"
-                });
+                // const oDialogContent = await Fragment.load({ 
+                //     "name": "VNRDEMNAGI.view.fragments.POdetail",
+                //      "type" : "XML"
+                // });
+                const oDialogContent = await this.loadFragment({ 
+                  "name": "VNRDEMNAGI.view.fragments.POdetail",
+                   "autoPrefixId": true
+              });                
                   this.detailDialog = new Dialog({
                     title: "PO Details",
                     content: oDialogContent

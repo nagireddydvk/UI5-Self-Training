@@ -15,7 +15,7 @@ builder:
           destination: SA4_CLONING
           url: http://wssa4.buhler-ltd.com:443
         app:
-          name: VNRDEMNAGI
+          name: YVNRDEMNAGI
           description: VBDD
           package: ZUI5_TRAINING
           transport: SA4K902589
